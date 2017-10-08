@@ -1,10 +1,8 @@
 import nltk
-import os, glob, sys
+import os, glob
 import re, math
-import copy
 
 from nltk.corpus import stopwords
-from string import punctuation
 from nltk.stem.porter import PorterStemmer
 from collections import defaultdict, Counter, OrderedDict
 from sklearn.externals import joblib
@@ -199,7 +197,7 @@ def intersectLists(lists):
     
 
 def extractDocs(q):
-    length = len(q)
+##    length = len(q)
 ##    for term in q:
 ##        if term not in invIndex:
 ##            #if a term doesn't appear in the index
@@ -422,15 +420,7 @@ def wordCount(queryTerms,sentTokens):
             qWordCount += 1
     return qWordCount
 
- 
-def longestCommmonTerms(queryTerms, sentTokens):
-    table = [[0] * (len(sentTokens) + 1) for _ in xrange(len(queryTerms) + 1)]
-    for i, ca in enumerate(queryTerms, 1):
-        for j, cb in enumerate(sentTokens, 1):
-            table[i][j] = (
-                table[i - 1][j - 1] + 1 if ca == cb else
-                max(table[i][j - 1], table[i - 1][j]))
-    return table[-1][-1]
+
 
 def noveltyFactor(queryTerms, parsedSentence):
     return len(filter(lambda x: x not in queryTerms, parsedSentence))
@@ -457,7 +447,6 @@ def answerTypeMatching(candidateSentence,answerType,AnswerTypeToCheck):
                 
 def sentFeatures(queryTerms,candidateSentence,answerType,paraScore):
     """ Features for sentence extraction."""
-    sentTokens = nltk.word_tokenize(candidateSentence)
     parsedSent = parseSent(candidateSentence)
     ## Feature 1. Number of query words in the sentence
     queryWordCount = float(wordCount(queryTerms,parsedSent))/len(queryTerms)
@@ -525,7 +514,6 @@ def questionProc(question):
 
 def modifyTerm(queStemTag,termToModify):
     porter = PorterStemmer()
-    termsToRemove = []
     alphabet_sets = set(["BFPV","CGJKQSXZ", "DT", "MN","AE","OU","EI"])
     if queStemTag[termToModify][1] in ['NN','NNP']:
         soundex_code = getSoundex(queStemTag[termToModify][0])
