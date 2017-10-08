@@ -19,3 +19,7 @@ It is the main of the program. Contains the following components -
     * The paragraphs are split into sentences which are again sorted in order of relevance. The most relevant answer is taken as response       to all other types of questions. 
   * Definition_extraction.py : 
     * Uses ML to separate definitions of a keyword from all other types of candidate responses. This is used only when the response             expected is a definition. For example, "what" type of questions
+
+
+The contents of TextFiles were obtained from wikipedia.
+The training data was obtained from University of Illinois Question Classification Dataset (http://cogcomp.org/Data/QA/QC/train_5500.label).
