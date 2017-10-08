@@ -1,5 +1,5 @@
 # QA-Engine
-A Simple QA Engine using Information Retrieval
+A Simple QA Engine using Information Retrieval. Text to be retrieved is stored in TextFiles directory
 
 ### QASystem.py : 
 It is the main of the program. Contains the following components - 
