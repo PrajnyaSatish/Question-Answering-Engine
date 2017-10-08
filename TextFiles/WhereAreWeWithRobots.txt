@@ -1,0 +1,30 @@
+Where are we with robots?
+
+Once again robots are making the headlines. Whether it is Amazon's robotic arms sorting out the stock of goods, packing the clients orders and dispatching them, or Google's self-driving car, robots are on us, and for good.
+
+
+Beyond the extraordinary prototypes that always manage to impress the crowd like Honda's celebrated Asimo, robots working hard in manufacturing facilities have been around for several decades now. Still, Asimo that was first introduced by the Japanese carmaker in 2000 and that keeps being improved, becoming more intelligent, perhaps is the most human looking machine. Besides, Honda calls him humanoid. 
+
+
+A few years ago I visited a fully robotised computer factory in northern Italy. It was run by Olivetti and had an output of one computer every 10 seconds. Robots were practically doing all the work there. There were a total of just five human beings in the huge super-high-tech factory. Their job was only to monitor the robots and to report any eventual malfunction so that a maintenance team would come and fix the robots.
+
+
+There was a time when robots were purely a matter of science fiction. It is not the case anymore, even if their external physical shape today does not always exactly correspond to what people had in mind in the 20th century or what is usually shown in sci-fi movies like I, Robot (2004, Will Smith) and the like. In most cases they are robotic arms or robotic machine tools.
+
+
+Apart from those found today in manufacturing, there is little doubt that we're closer than ever to the real intelligent, "friendly" robot, the companion that would be affordable, that would help us with all the menial tasks at home (house cleaning, ironing, taking out the garbage, etc...). There is also little doubt that this is becoming possible thanks to the progress in computer technology. After all faster, more powerful, more dependable and cheaper computers constitute the backbone of robots, of their future.
+
+
+The other elements are purely on the mathematical side of artificial intelligence and advanced programming techniques and languages, two critical aspects that still require some work before we can all get a robot like Asimo at home or in our office.
+
+
+Beside Honda's flagship robot there are a few humanoid models on the market and can actually be bought. Whereas Asimo is the undisputed reference and leader, its $2,500,000 price tag makes it beyond reach. The other models are much less expensive but also are significantly more limited in functionality and much smaller in size (Asimo is 130cm tall and weighs 48kg), and therefore should be looked at as high-tech advanced toys.
+
+
+To name only a few: Hovis, by Korean DingBu Robot is $2,000. Robotis OP, by American Virginia Tech's Robotics and Mechanisms Laboratory, is $10,000. Darwin Mini, by Robotis Mini, is a mere $500. Nao Evolution, by French company Aldebaran Robotics, is $8,000. Pepper, by Aldebaran and Japanese SoftBank, is $2,000.
+
+
+Curiously what was very much intriguing to me when I was a teenager and started reading about robots was not the ability of the machines to perform this or that task, nor their shape, but the etymology of their very name. Still, learning that it comes from the Czech "robota" and means forced labour did not bring me any valuable scientific information, except that the meaning made perfect sense to me.
+
+
+The very first programmable, digital machine referred to as robot was used by General Motors back in the early 1960s at one of its automotive manufacturing plants in the USA. Then countless sci-fi movies took it from there and robots, regardless of appearance or ability, became part of our collective unconscious. Soon, very soon, they will be in our homes, as surely as drones are seen and used almost everywhere today and smartphones have invaded us already.
