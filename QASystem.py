@@ -298,7 +298,7 @@ def queryWordCount(queryTerms,paraTerms):
 
 
 def longestCommmonTerms(queryTerms, paraTerms):
-    table = [[0] * (len(paraTerms) + 1) for _ in xrange(len(queryTerms) + 1)]
+    table = [[0] * (len(paraTerms) + 1) for _ in range(len(queryTerms) + 1)]
     for i, ca in enumerate(queryTerms, 1):
         for j, cb in enumerate(paraTerms, 1):
             table[i][j] = (
@@ -491,7 +491,7 @@ def getSent(releventParas,queryTerms,answerType):
 
 
 def getQuestion():
-    question = raw_input("Enter your question: ")
+    question = input("Enter your question: ")
     keywords = keyword_extractor(question)
     rank_select = 7
     queryTerms = get_Query(keywords,rank_select)
@@ -575,39 +575,34 @@ def decideAnswer(answerType, queryTerms, releventParas):
                 return "I cannot help you with this question"
 
 while True:
-    print
+    print()
     question,queryTerms,queryBiTokens = getQuestion()
-    print 
-    print 'Query terms: ', queryTerms
+    print('\nQuery terms: ', queryTerms)
 
     filename = 'SVM_MODEL/SVM_Model.sav'
     SVC_Classifier = joblib.load(filename)
     answerType = get_predictions(question)
     #answerType = 'DESC'
-    print
-    print 'Answer type: ', answerType
+    print('\nAnswer type: ', answerType)
 
     invIndex,df,idf,numOfTextFiles,SoundexCodes = buildInvIndex()
 
     queStemTag = questionProc(question)
     queryTerms = [modifyTerm(queStemTag,word) if word not in invIndex else word for word in queryTerms]
     queryTerms = [word for word in queryTerms if len(word) > 0]   
-    print 
-    print 'Query terms: ', queryTerms
+    print('\nQuery terms: ', queryTerms)
 
     tfIdfQueryNorm = tfidfQuery(queryTerms,idf)
     releventDocs = extractDocs(queryTerms)
-    print  
-    print "Relevent Documents:",releventDocs
+    print ("\nRelevent Documents:",releventDocs)
 
     ### Print top ten relevent paras
     paraScores = getReleventParas(queryTerms, queryBiTokens)
     paraScores.sort(reverse=True)
     releventParas = paraScores[:3]
   
-    print
-    print "The answer:"
+    print("\nThe answer:")
     finalAnswer = decideAnswer(answerType, queryTerms, releventParas)
-    print finalAnswer
+    print(finalAnswer)
 
 

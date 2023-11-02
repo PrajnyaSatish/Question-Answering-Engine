@@ -93,21 +93,20 @@ question,coarse_label,fine_label = get_labels(raw_data)
 labeled_data = zip(question,coarse_label)
 
 
-print "Extracting Featuresets now..."
+print("Extracting Featuresets now...")
 featuresets = [(combined_features(que),cl) for (que,cl) in labeled_data]
-print "Featuresets ready"
-print
+print("Featuresets ready\n")
 
 
 
 ### ----------------- Train the data for coarse labels --------------- ###
-print"Starting train..."
+print("Starting train...")
 from sklearn.multiclass import OneVsRestClassifier
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.svm import SVC, LinearSVC
 SVC_classifier = SklearnClassifier(OneVsRestClassifier(LinearSVC(C=100)))
 SVC_classifier.train(featuresets)
-print "training complete!"
+print("training complete!")
 ### -------------------- ********** ------------------- ###
 
 
@@ -154,7 +153,7 @@ print "training complete!"
 ##SVC_classifier_ABBR = SklearnClassifier(OneVsRestClassifier(LinearSVC()))
 ##SVC_classifier_ABBR.train(featuresets_ABBR)
 ##print "training complete!"
-print
+print()
 ### -------------------- ********** ------------------- ###
 
 
@@ -185,21 +184,20 @@ import numpy as np
 true_label = np.array(coarse_label_test)
 predicted_label = np.array(predict_labels)
 from sklearn.metrics import precision_recall_fscore_support
-precision,recall,fscore,support = precision_recall_fscore_support(true_label, predicted_label)
+precision, recall, fscore, support = precision_recall_fscore_support(true_label, predicted_label)
 from collections import Counter
 counts = Counter(coarse_label_test)
-all_set=zip(precision,recall,fscore,support)
-print
+all_set = zip(precision,recall,fscore,support)
+print()
 for precision,recall,fscore,support in all_set:
-    print 'Precision:',round(precision,2)
-    print 'Recall:', round(recall,2)
-    print 'F1:',round(fscore,2)
-    print 'NumOfCases:',support
-    print
-print	
+    print('Precision:', round(precision, 2))
+    print('Recall:', round(recall, 2))
+    print('F1:', round(fscore, 2))
+    print()
+print()
 test_features = [(combined_features(que),cl) for (que,cl) in labeled_data_test]
 print("test_features_length", len(test_features))
-print("Accuracy:",nltk.classify.accuracy(SVC_classifier, test_features))
+print("Accuracy:", nltk.classify.accuracy(SVC_classifier, test_features))
 
 
 
@@ -234,5 +232,5 @@ print("Accuracy:",nltk.classify.accuracy(SVC_classifier, test_features))
 
 
 
-print
+print()
 print("DONE!")

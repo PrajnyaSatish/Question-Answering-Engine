@@ -21,12 +21,12 @@ def separate_data_and_labels(data_in):
         try:
             Terms.append(line[0])
         except:
-            print line
+            print(line)
         Sentences.append(line[1])
         try:
             Label.append(line[2])
         except:
-            print line
+            print(line)
     return Terms,Sentences,Label
 
 def posFirstArticle(tokens):
@@ -193,10 +193,10 @@ def main():
 
     predictions = classifier.predict(featureIn_test)
     score = classifier.score(featureIn_test,labels_test)
-    print 'Num of test samples',len(test_data)
-    print 'Accuracy:',score
+    print('Num of test samples',len(test_data))
+    print('Accuracy:',score)
     ##print '\n\n',predictions
-    print '\n','done'
+    print('\n','done')
     ##
 
 if __name__=="__main__":

@@ -40,7 +40,7 @@ class SentenceFeatures():
         candidate sentence and the query words.
         Function returns a number which is represents the longest common
         sequence."""
-        table = [[0] * (len(sentTokens) + 1) for _ in xrange(len(queryTerms) + 1)]
+        table = [[0] * (len(sentTokens) + 1) for _ in range(len(queryTerms) + 1)]
         for i, ca in enumerate(queryTerms, 1):
             for j, cb in enumerate(sentTokens, 1):
                 table[i][j] = (
@@ -120,14 +120,14 @@ def main():
     design corrects astigmatism and is as affordable as a good pair of glasses."""
     sentences = SentenceFeatures().SplitToSentence(Paragraph)
     for s in sentences:
-        print s
+        print(s)
     queryTerms = ['ceo','alcon']
     candidateSentence = 'Mr. Mike Ball is the division head and CEO of Alcon.'
     answerType = 'HUM'
     paraScore = 0.8 ## Assumed
     sentFeat = SentenceFeatures().sentFeatures(queryTerms,candidateSentence,
                                            answerType,paraScore)
-    print sentFeat
+    print(sentFeat)
 
 if __name__ == "__main__":
     main()
